@@ -31,7 +31,26 @@ if (TextRed[1].style.color === 'green'){
 // exo 5
 
 var dbNav = document.getElementsByTagName("header");
+var reload = document.getElementsByClassName("col-sm-8");
     dbNav[0].addEventListener("dblclick",  function fonc() {   
     document.styleSheets[0].disabled = true|false;
-   
+    reload[0].addEventListener("dblclick", function menuToggle() {
+    window.location.reload();
+    });
 }); 
+
+// exo 6
+var View = document.getElementsByClassName("btn-success");
+
+for(let l = 0; l < View.length; l++){
+View[l].addEventListener("mouseover", function fonct(e){ 
+  
+  if (document.getElementsByClassName("card-text")[l].classList.toggle("collapse") === false){
+    document.getElementsByClassName("card-img-top")[l].style.width = "100%";
+    
+  } else {
+    document.getElementsByClassName("card-img-top")[l].style.width = "20%";
+  }
+});
+}
+
