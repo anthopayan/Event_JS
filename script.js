@@ -54,3 +54,10 @@ View[l].addEventListener("mouseover", function fonct(e){
 });
 }
 
+// exo 7
+let btCard = document.getElementsByClassName('btn btn-secondary my-2')[0];
+let globalCard = document.getElementsByClassName('row')[1];
+
+btCard.addEventListener('click', function() {
+  globalCard.insertBefore(globalCard.lastElementChild, globalCard.firstElementChild)
+});
